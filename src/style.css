@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-conn {
+  width: 50rem;
+  height: fit-content;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+}
+
+.displayCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.displayCon img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.displayCon .information {
+  margin-top: 3rem;
+  align-self: flex-start;
+  padding: 1rem 5em;
+}
+
+.information p {
+  font-size: 1.9rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.information p > span{
+    font-weight: 500;
+}
