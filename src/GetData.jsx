@@ -1,41 +1,35 @@
-import React, { useContext, useEffect, useState } from 'react'
-import {CreateContent} from './App'
+import React, { useContext, useEffect, useState } from "react";
+import { CreateContent } from "./App";
 
 const GetData = () => {
-  const [search , setSearch] = useState('');
-  
-const {data , setData} = useContext(CreateContent);
+  const [search, setSearch] = useState("yoosemry");
 
-useEffect(()=>{
-  const fetGithub = async ()=>{
+  const { data, setData } = useContext(CreateContent);
 
-
+  useEffect(() => {
+    const fetGithub = async () => {
       try {
-        
         const response = await fetch(`https://api.github.com/users/${search}`);
         const dataGithub = await response.json();
         console.log(dataGithub);
-         setData(dataGithub);
-        
-
+        setData(dataGithub);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    
-   
-  }   
-  fetGithub();
-},[search])
+    };
+    fetGithub();
+  }, [search]);
 
   return (
-
-    <div className='input-conn'>
-
-
-    <input placeholder='Enter username' className='input' onChange={(e)=> setSearch(e.target.value)} value={search}  />
-
+    <div className="input-conn">
+      <input
+        placeholder="Enter username"
+        className="input"
+        onChange={(e) => setSearch(e.target.value)}
+        value={search}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default GetData
+export default GetData;
